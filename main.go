@@ -58,8 +58,6 @@ func textChunk(text string) io.Reader {
 	byteData := []byte(text)
 	var buffer bytes.Buffer
 
-	hoge := len(byteData)
-
 	binary.Write(&buffer, binary.BigEndian, int32(len(byteData)))
 	// これだと動かないので注意
 	//binary.Write(&buffer, binary.BigEndian, len(byteData))
